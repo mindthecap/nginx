@@ -12,4 +12,6 @@ EXPOSE 80/tcp
 # entrypoint allows you to pass your arguments to the container at runtime
 # very similar to a binary you would run. For example, in the following
 # docker run -it <IMAGE> --help' is like running 'iperf --help'
-ENTRYPOINT ["nginx"]
+#ENTRYPOINT ["nginx"]
+
+CMD ["nginx", "-g", "daemon off;"]
